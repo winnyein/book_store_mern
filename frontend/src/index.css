@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+  .table-data {
+    @apply border-2 border-gray-600 rounded-md text-center text-lg;
+  }
+  .table-icon {
+    @apply h-8 w-6 text-blue-900 cursor-pointer;
+  }
+}
