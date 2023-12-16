@@ -18,7 +18,7 @@ const CreateBook = () => {
         try {
           setIsLoading(true);
           const data = await axios.post(
-            "http://localhost:5000/books/create",
+            "https://book-store-mern-navy.vercel.app/books/create",
             book
           );
           console.log(data);

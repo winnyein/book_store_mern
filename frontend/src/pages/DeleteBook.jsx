@@ -10,7 +10,9 @@ const DeleteBook = () => {
   const deleteHandler = async () => {
     try {
       setIsLoading(true);
-      await axios.delete(`http://localhost:5000/books/delete/${id}`);
+      await axios.delete(
+        `https://book-store-mern-navy.vercel.app/books/delete/${id}`
+      );
 
       setIsLoading(false);
       navigate("/");

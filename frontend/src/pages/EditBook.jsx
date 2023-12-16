@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { Spinner } from "../components";
 import areObjectsEqual from "../utils/AreObjectsEqual";
 
@@ -18,7 +18,9 @@ const EditBook = () => {
     try {
       (async () => {
         setIsLoading(true);
-        const response = await axios.get(`http://localhost:5000/books/${id}`);
+        const response = await axios.get(
+          `https://book-store-mern-navy.vercel.app/books/${id}`
+        );
         setBook({
           title: response.data.data.title,
           author: response.data.data.author,
@@ -48,7 +50,7 @@ const EditBook = () => {
         try {
           setIsLoading(true);
           const data = await axios.put(
-            `http://localhost:5000/books/update/${id}`,
+            `https://book-store-mern-navy.vercel.app/books/update/${id}`,
             newBook
           );
           console.log(data);

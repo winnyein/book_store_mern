@@ -12,7 +12,9 @@ const ShowBook = () => {
     try {
       (async () => {
         setIsLoading(true);
-        const response = await axios.get(`http://localhost:5000/books/${id}`);
+        const response = await axios.get(
+          `https://book-store-mern-navy.vercel.app/books/${id}`
+        );
         setBook(response.data.data);
         setIsLoading(false);
       })();
