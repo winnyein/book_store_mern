@@ -5,7 +5,11 @@ import bookRoute from "./routes/bookRoutes.js";
 import cors from "cors";
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://book-store-mern-wno.vercel.app/",
+  })
+);
 
 app.get("/", (req, res) => {
   return res.status(200).send("Welcome to the book api");
