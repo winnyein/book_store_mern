@@ -14,6 +14,16 @@ app.use(
 app.get("/", (req, res) => {
   return res.status(200).send("Welcome to the book api");
 });
+app.use(function (req, res, next) {
+    //Enabling CORS
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, 
+    Accept, x-client-key, x-client-token, x-client-secret, Authorization");
+    next();
+ });
+
+
 dotenv.config();
 const port = process.env.PORT || 3000;
 (async () => {
