@@ -19,7 +19,7 @@ const EditBook = () => {
       (async () => {
         setIsLoading(true);
         const response = await axios.get(
-          `https://book-store-mern-navy.vercel.app/books/${id}`
+          `https://book-store-mern-dn72.onrender.com/books/${id}`
         );
         setBook({
           title: response.data.data.title,
