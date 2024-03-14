@@ -13,7 +13,7 @@ const Home = () => {
     try {
       (async () => {
         const response = await axios.get(
-          "https://book-store-mern-bgal.onrender.com/books/"
+          "https://book-store-mern-dn72.onrender.com/books/"
         );
         setBooks(response.data.data);
         setIsLoading(false);
