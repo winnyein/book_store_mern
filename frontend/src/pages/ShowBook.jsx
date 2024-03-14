@@ -13,7 +13,7 @@ const ShowBook = () => {
       (async () => {
         setIsLoading(true);
         const response = await axios.get(
-          `https://book-store-mern-bgal.onrender.com/books/${id}`
+          `https://book-store-mern-dn72.onrender.com/books/${id}`
         );
         setBook(response.data.data);
         setIsLoading(false);
