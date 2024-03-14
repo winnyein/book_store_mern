@@ -11,7 +11,7 @@ const DeleteBook = () => {
     try {
       setIsLoading(true);
       await axios.delete(
-        `https://book-store-mern-navy.vercel.app/books/delete/${id}`
+        `https://book-store-mern-bgal.onrender.com/books/delete/${id}`
       );
 
       setIsLoading(false);
